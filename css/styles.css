@@ -1,0 +1,219 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --secondary: #FF8C00;
+    --primary: #FF6F00;
+    --gray-light: #f4f4f9;
+    --gray-dark: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    padding: 16px;
+}
+
+.chatbot-container {
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--white);
+    border-radius: 12px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+.greeting-container {
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.greeting-container img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 100px;
+}
+
+.greeting-message {
+    font-size: 1.5rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.elevate-button {
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 28px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: var(--footer-button-size, 400px);
+    height: var(--footer-button-size, 48px);
+}
+
+.elevate-button:hover {
+    background-color: var(--primary);
+}
+
+.chatbot-header {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--white);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message-bot {
+    background-color: var(--secondary);
+    color: var(--white);
+    align-self: flex-start;
+}
+
+.message-user {
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+    align-self: flex-end;
+}
+
+.chatbot-input-container {
+    display: flex;
+    border-top: 1px solid var(--gray-light);
+    background-color: var(--white);
+    padding: 20px;
+    gap: 15px;
+}
+
+.chatbot-input {
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--gray-light);
+}
+
+.circle-button {
+    background-color: var(--circle-button-color, var(--secondary));
+    border: none;
+    border-radius: 50%;
+    width: var(--circle-button-size, 40px);
+    height: var(--circle-button-size, 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle-button ion-icon {
+    font-size: calc(var(--circle-button-size, 40px) / 2);
+    color: var(--circle-icon-color, var(--white));
+}
+
+.circle-button:hover {
+    background-color: var(--circle-hover-color, var(--primary));
+}
+
+footer {
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--white);
+    border-radius: 12px;
+    display: none;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    justify-content: center;
+}
+
+.chatbot-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    gap: 30px;
+}
+
+.footer-button {
+    background-color: var(--footer-button-color,var(--secondary));
+    border: none;
+    border-radius: 50%;
+    width: var(--footer-button-size, 50px);
+    height: var(--footer-button-size, 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--footer-button-color,var(--white));
+    font-size: calc(var(--footer-button-size, 50px) / 2);
+    cursor: pointer;
+}
+
+.footer-button ion-icon {
+    font-size: calc(var(--footer-button-size, 50px) / 2);
+    width: calc(var(--footer-button-size, 50px) / 2);
+    height: calc(var(--footer-button-size, 50px) / 2);
+    color: var(--footer-icon-color, var(--white));
+}
+
+.footer-button:hover {
+    background-color:  var(--footer-hover-color,var(--primary));
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px var(--primary);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px var(--primary);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px var(--primary);
+    }
+}

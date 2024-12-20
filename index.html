@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Chatbot UI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/chatbot.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="greeting-container">
+        <img src="assets/smile.png" alt="Robot" style="width: 250px; height: auto;">
+
+        <div class="greeting-message">Hi, I'm FAI Chatbot!<br>How can I help you today?</div>
+        <button class="elevate-button" onclick="startChatbot()">Start Conversation</button>
+    </div>
+
+    <div class="chatbot-container">
+        <div class="chatbot-header" style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+                <img src="assets/idle.png" alt="Chatbot Logo" style="width: 30px; height: 35px; margin-right: 20px;">
+                <span>FAI Chatbot</span>
+            </div>
+            <div style="display: flex; gap: 16px;">
+                <button class="circle-button" 
+                        style="--circle-button-size: 35px; 
+                            --circle-button-color: var(--white);
+                            --circle-icon-color: var(--primary);  
+                            --circle-hover-color: var(--gray-light);">
+                    <ion-icon name="chevron-back"></ion-icon>
+                </button>
+                <button class="circle-button" 
+                        style="--circle-button-size: 35px; 
+                            --circle-button-color: var(--white); 
+                            --circle-icon-color: var(--primary); 
+                            --circle-hover-color:var(--gray-light);">
+                    <ion-icon name="chevron-forward"></ion-icon>
+                </button>
+            </div>
+            
+        </div>
+
+        <div class="chatbot-messages">
+            <div class="message message-bot">Hello! How can I assist you today?</div>
+            <div class="message message-user">I want to know about your services.</div>
+            <div class="message message-bot">Sure! We offer a variety of services including AI development, web development, and more.</div>
+        </div>
+
+        <div class="chatbot-input-container">
+            <input type="text" class="chatbot-input" placeholder="Type a message...">
+            <button class="circle-button"><ion-icon name="send"></ion-icon></button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="chatbot-footer">
+            <button class="footer-button" onclick="goBack()"><ion-icon name="arrow-back"></ion-icon></button>
+            <button class="footer-button" ><ion-icon name="mic-off-outline"></ion-icon></button>
+            <button class="footer-button mic-button" style="--footer-button-size: 80px;" onclick="toggleListening()">
+                <ion-icon name="mic"></ion-icon>
+            </button>
+            <button class="footer-button"><ion-icon name="volume-off"></ion-icon></button>
+            <button class="footer-button"><ion-icon name="volume-medium"></ion-icon></button>
+        </div>
+    </footer>
+</body>
+</html>
